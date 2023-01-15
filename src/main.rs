@@ -38,6 +38,7 @@ fn main() -> Result<()> {
         cursor::Show,
         terminal::LeaveAlternateScreen
     )?;
+    terminal::disable_raw_mode()?;
     Ok(())
 }
 
