@@ -22,7 +22,7 @@ fn main() -> Result<()> {
         stdout,
         style::ResetColor,
         terminal::Clear(ClearType::All),
-        cursor::Show,
+        cursor::Hide,
         cursor::MoveTo(1, 1)
     )?;
 
