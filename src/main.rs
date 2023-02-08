@@ -6,12 +6,10 @@ use std::{
 
 use crossterm::{
     cursor, execute, queue,
-    style::{self, Print, ContentStyle, Color},
+    style::{self, Color, ContentStyle, Print, Attributes, Attribute},
     terminal::{self, ClearType},
     Result,
 };
-
-
 
 fn main() -> Result<()> {
     let mut stdout = std::io::stdout();
@@ -29,7 +27,7 @@ fn main() -> Result<()> {
     )?;
 
     draw_window(&mut stdout, 0, 0, cols / 2, rows)?;
-    draw_active_window(&mut stdout, cols / 2, 0, cols / 2 , rows / 2)?;
+    draw_active_window(&mut stdout, cols / 2, 0, cols / 2, rows / 2)?;
     draw_window(&mut stdout, cols / 2, rows / 2, cols / 2, rows / 2)?;
 
     stdout.flush()?;
